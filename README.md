@@ -1,1 +1,1 @@
-# machine_learning
+# Máy Học SGU 2026
