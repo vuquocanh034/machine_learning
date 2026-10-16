@@ -1,0 +1,17 @@
+﻿,r với log1p(SalePrice),Loại
+TotalSF,0.825,Biến mới
+OverallQual,0.821,Biến gốc (đối chiếu)
+GrLivArea,0.725,Biến gốc (đối chiếu)
+TotalBath,0.677,Biến mới
+GarageArea,0.656,Biến gốc (đối chiếu)
+TotalBsmtSF,0.648,Biến gốc (đối chiếu)
+1stFlrSF,0.621,Biến gốc (đối chiếu)
+HasFireplace,0.51,Biến mới
+TotalPorchSF,0.4,Biến mới
+HasGarage,0.323,Biến mới
+HasBsmt,0.2,Biến mới
+Has2ndFlr,0.151,Biến mới
+HasPool,0.077,Biến mới
+IsRemodeled,-0.074,Biến mới
+RemodAge,-0.569,Biến mới
+HouseAge,-0.588,Biến mới

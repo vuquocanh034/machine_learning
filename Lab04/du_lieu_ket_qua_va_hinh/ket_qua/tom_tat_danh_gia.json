@@ -1,0 +1,13 @@
+{
+ "ensemble_holdout_rmse": 0.11740699498454622,
+ "best_global": {
+  "selector": "Variance",
+  "model": "SVM",
+  "rmse": 0.1090436699339236
+ },
+ "ho_best_per_model": {
+  "RandomForest": 0.13931779122505297,
+  "SVM": 0.11770584703778386,
+  "XGBoost": 0.11363123676835028
+ }
+}
