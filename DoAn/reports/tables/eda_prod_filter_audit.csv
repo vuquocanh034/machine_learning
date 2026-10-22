@@ -1,0 +1,6 @@
+﻿step,remaining_rows,removed_rows
+Giai đoạn quan sát,332447,0
+Bỏ hóa đơn C: không phải lượt bán dương,326463,5984
+Quantity > 0: tách trả hàng/điều chỉnh,325519,944
+UnitPrice > 0: tách miễn phí/giá lỗi,324631,888
+Bỏ mã phí/điều chỉnh đã kiểm tra mô tả,323032,1599
