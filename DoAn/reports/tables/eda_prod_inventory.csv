@@ -1,0 +1,9 @@
+﻿,dtype,missing_full,missing_observation
+InvoiceNo,str,0,0
+StockCode,str,0,0
+Description,object,1454,1181
+Quantity,int64,0,0
+InvoiceDate,datetime64[us],0,0
+UnitPrice,float64,0,0
+CustomerID,Int64,135080,91641
+Country,str,0,0
