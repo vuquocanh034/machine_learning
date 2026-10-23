@@ -1,0 +1,325 @@
+NHẬT KÝ CHẠY CODE — Lab Phân tích khám phá dữ liệu và Các giải thuật phân loại cơ bản
+Môi trường: Python 3.12.3 | numpy 2.3.5, pandas 2.3.3, scipy 1.16.3, sklearn 1.8.0, matplotlib 3.10.0, seaborn 0.13.2, graphviz 0.21, ydata_profiling 4.18.4, sweetviz 2.3.3 | Linux 6.18.44-fc-v114
+Giờ ghi theo múi giờ Việt Nam (UTC+7). Mỗi dòng: giờ bắt đầu | thời gian chạy | trạng thái | nội dung ô lệnh.
+
+====================================================================================================
+NOTEBOOK: Lab1_Phan_tich_kham_pha_du_lieu.ipynb
+  [01] 09:14:38 |   11.87s | OK   | import numpy as np
+  [02] 09:14:50 |    0.01s | OK   | # Take a quick look at the data
+  [03] 09:14:50 |    0.00s | OK   | covid_data.dtypes
+  [04] 09:14:50 |    0.01s | OK   | covid_data.shape
+  [05] 09:14:50 |    0.05s | OK   | # Get the mean of the data
+  [06] 09:14:50 |    0.00s | OK   | print("mean      :", data_mean)
+  [07] 09:14:50 |    0.04s | OK   | # [Mở rộng] bỏ giá trị thiếu trước khi tính thống kê
+  [08] 09:14:50 |    0.01s | OK   | import pandas as pd
+  [09] 09:14:50 |    0.01s | OK   | marketing_data.head()
+  [10] 09:14:50 |    0.01s | OK   | # Remove duplicates across the columns in our dataset:
+  [11] 09:14:50 |    0.01s | OK   | # Delete a specified row at index value 1:
+  [12] 09:14:50 |    0.01s | OK   | # Delete a single column
+  [13] 09:14:50 |    0.01s | OK   | # Replace the values in Teenhome with has teen and has no teen
+  [14] 09:14:50 |    0.01s | OK   | # Fill NAs in the Income column
+  [15] 09:14:50 |    0.01s | OK   | # Check for missing values using the isnull and sum methods
+  [16] 09:14:50 |    0.01s | OK   | # Drop missing values using the dropna method
+  [17] 09:14:50 |    0.02s | OK   | import numpy as np
+  [18] 09:14:50 |    0.00s | OK   | wine.dtypes
+  [19] 09:14:50 |    0.01s | OK   | wine.isnull().sum()
+  [20] 09:14:50 |    0.03s | OK   | wine.describe().T
+  [21] 09:14:50 |    0.01s | OK   | # Các thước đo thống kê mô tả cho một số cột (ví dụ: alcohol)
+  [22] 09:14:50 |    0.01s | OK   | # Phân bố của biến mục tiêu quality và độ lệch (skewness) của các biến
+  [23] 09:14:50 |    0.01s | OK   | # Phát hiện ngoại lai bằng quy tắc 1.5*IQR
+  [24] 09:14:50 |    0.01s | OK   | diabetes = pd.read_csv("data/diabetes.csv")
+  [25] 09:14:50 |    0.02s | OK   | diabetes.describe().T
+  [26] 09:14:50 |    0.01s | OK   | # Trong dữ liệu Pima, giá trị 0 ở các cột dưới đây thực chất là dữ liệ
+  [27] 09:14:50 |    0.03s | OK   | # Xử lý dữ liệu thiếu: thay 0 bằng NaN rồi điền bằng median của từng c
+  [28] 09:14:50 |    0.14s | OK   | print("Phân bố nhãn Outcome:"); print(diabetes['Outcome'].value_counts
+  [29] 09:14:50 |    0.01s | OK   | import os
+  [30] 09:14:50 |    0.66s | OK   | import pandas as pd
+  [31] 09:14:51 |    0.01s | OK   | houseprices_sorted = houseprices_data.sort_values('Price', ascending =
+  [32] 09:14:51 |    0.34s | OK   | # case 1: basic
+  [33] 09:14:51 |    0.20s | OK   | # case 2: advanced 1
+  [34] 09:14:51 |    0.66s | OK   | # case 3: advanced 2
+  [35] 09:14:52 |    0.64s | OK   | import matplotlib.pyplot as plt
+  [36] 09:14:53 |    0.30s | OK   | # case 2: advanced 1
+  [37] 09:14:53 |    0.82s | OK   | # case 3: view multiple perspectives at once
+  [38] 09:14:54 |    0.66s | OK   | import matplotlib.pyplot as plt
+  [39] 09:14:55 |    0.93s | OK   | # 3. Boxplot alcohol theo quality (biến số vs biến phân loại)
+  [40] 09:14:55 |    0.47s | OK   | diabetes = pd.read_csv("data/diabetes.csv")
+  [41] 09:14:56 |    0.83s | OK   | # 3. Boxplot BMI theo Outcome và scatter Glucose - BMI
+  [42] 09:14:57 |   63.45s | OK   | import pandas as pd, matplotlib.pyplot as plt, seaborn as sns
+  [43] 09:16:00 |    0.14s | OK   | retail.info()
+  [44] 09:16:00 |    0.61s | OK   | print(retail.isnull().sum())
+  [45] 09:16:01 |    1.07s | OK   | print("Đơn bị hủy:", retail['InvoiceNo'].astype(str).str.startswith('C
+  [46] 09:16:02 |    0.61s | OK   | # 10 quốc gia có doanh thu cao nhất
+  [47] 09:16:03 |    0.39s | OK   | # 10 sản phẩm bán nhiều nhất và doanh thu theo tháng
+  [48] 09:16:03 |    1.20s | OK   | # Phân bố số lượng và đơn giá (thang log do lệch phải mạnh)
+  [49] 09:16:04 |    0.01s | OK   | import pandas as pd
+  [50] 09:16:04 |    0.20s | OK   | # case 1: basic
+  [51] 09:16:05 |    0.28s | OK   | # case 2: advanced
+  [52] 09:16:05 |    0.17s | OK   | # case 1: basic
+  [53] 09:16:05 |    0.24s | OK   | # case 2: advanced
+  [54] 09:16:05 |    0.58s | OK   | penguins_group = penguins_data.groupby('species').count()
+  [55] 09:16:06 |    0.08s | OK   | # case 2: advanced
+  [56] 09:16:06 |    0.15s | OK   | import pandas as pd
+  [57] 09:16:06 |    0.17s | OK   | # case 2: advanced
+  [58] 09:16:06 |    0.16s | OK   | # case 1: basic
+  [59] 09:16:06 |    0.19s | OK   | # case 2: advanced
+  [60] 09:16:07 |    0.02s | OK   | houseprices_data.describe()
+  [61] 09:16:07 |    0.01s | OK   | import pandas as pd
+  [62] 09:16:07 |    0.22s | OK   | # case 1: basic
+  [63] 09:16:07 |    0.26s | OK   | # case 2: advanced
+  [64] 09:16:07 |    0.02s | OK   | # [Chỉnh] cột 'sex' không được chọn ở bước 1 của đề nên nạp lại từ fil
+  [65] 09:16:07 |    0.02s | OK   | pd.pivot_table(penguins_data, values='culmen_length_mm',
+  [66] 09:16:07 |    1.11s | OK   | import seaborn as sns
+  [67] 09:16:08 |   60.75s | OK   | import pandas as pd
+  [68] --:--:-- |    --    | BỎ QUA (chỉ có code, không chạy tự động) | import pandas as pd
+  [69] 09:17:09 |   23.04s | OK   | import sweetviz as sv
+  [70] --:--:-- |    --    | BỎ QUA (chỉ có code, không chạy tự động) | from autoviz.AutoViz_Class import AutoViz_Class
+  => Bắt đầu 08/10/2026 09:14:38, kết thúc 09:17:32, tổng 174.3s; chạy 68/70 ô, bỏ qua 2, lỗi 0
+
+====================================================================================================
+NOTEBOOK: Lab2_Thuat_toan_phan_lop.ipynb
+  [01] 09:24:40 |    0.67s | OK   | import numpy as np #numerical computation
+  [02] 09:24:41 |    0.45s | OK   | df = pd.read_csv('data.csv') #Load the cleaned data
+  [03] 09:24:42 |    0.97s | OK   | from sklearn.model_selection import train_test_split
+  [04] 09:24:43 |    0.07s | OK   | # the tree will grow to a depth of at most 2
+  [05] 09:24:43 |    0.06s | OK   | dot_data = tree.export_graphviz(dt,
+  [06] 09:24:43 |    0.05s | OK   | # (lưu thêm ảnh PNG để đưa vào báo cáo)
+  [07] 09:24:43 |    3.53s | OK   | from sklearn.model_selection import GridSearchCV
+  [08] 09:24:46 |    0.00s | OK   | print("Tham số tốt nhất:", cv.best_params_)
+  [09] 09:24:46 |    0.00s | OK   | cv_results_df = pd.DataFrame(cv.cv_results_)
+  [10] 09:24:46 |    0.16s | OK   | mpl.rcParams['figure.dpi'] = 100   # [Chỉnh] hạ dpi để ảnh nhẹ hơn (đề
+  [11] 09:24:46 |    0.03s | OK   | from sklearn.model_selection import GridSearchCV
+  [12] 09:24:46 |   26.17s | OK   | #a parameter grid for this exercise in order to search the numbers of 
+  [13] 09:25:13 |    0.16s | OK   | cv_rf_ex_results_df = pd.DataFrame(cv_rf_ex.cv_results_)
+  [14] 09:25:13 |    0.00s | OK   | cv_rf_ex.best_params_
+  [15] 09:25:13 |    0.13s | OK   | # the feature names and importances
+  [16] 09:25:13 |    0.02s | OK   | from sklearn.ensemble import RandomForestClassifier
+  [17] 09:25:13 |    0.27s | OK   | # Cây quyết định: chọn max_depth bằng GridSearchCV
+  [18] 09:25:13 |    2.64s | OK   | # Rừng cây
+  [19] 09:25:16 |    0.30s | OK   | diab = pd.read_csv('data/diabetes_prediction_dataset.csv')
+  [20] 09:25:16 |   98.80s | OK   | gs_d = GridSearchCV(tree.DecisionTreeClassifier(random_state=24),
+  [21] 09:26:55 |    0.04s | OK   | import numpy as np
+  [22] 09:26:55 |    0.00s | OK   | # Từ tập dữ liệu ban đầu, tách lấy ma trận biểu diễn các đặc trưng và 
+  [23] 09:26:55 |    0.01s | OK   | from sklearn import svm
+  [24] 09:26:55 |    0.00s | OK   | # Tính độ chính xác trên tập huấn luyện và tập kiểm tra
+  [25] 09:26:55 |    0.01s | OK   | # best_svm, best_val_acc và best_kernel lần lượt là các biến lưu mô hì
+  [26] 09:26:55 |    0.11s | OK   | from sklearn.model_selection import GridSearchCV
+  [27] 09:26:55 |    0.01s | OK   | import pandas as pd
+  [28] 09:26:55 |    0.01s | OK   | #thông tin toàn bộ dữ liệu đã tải về
+  [29] 09:26:55 |    0.00s | OK   | #xem thông tin của một hình dưới dạng ma trận 8 x 8
+  [30] 09:26:55 |    0.00s | OK   | #xem thông tin của một hình dưới dạng mảng
+  [31] 09:26:55 |    0.00s | OK   | #xem thông tin 9 nhãn đầu tiên
+  [32] 09:26:55 |    0.81s | OK   | # Each Digit is represented in digits.images as a matrix of 8x8 = 64 p
+  [33] 09:26:56 |    0.07s | OK   | # Hàm vẽ 1 ảnh có kích thước 8 x 8 (ảnh lấy từ ma images)
+  [34] 09:26:56 |    0.05s | OK   | # Thực hiện import các thư viện cần thiết để xây dựng mô hình SVM
+  [35] 09:26:56 |    0.25s | OK   | from sklearn.metrics import confusion_matrix
+  [36] 09:26:56 |    0.01s | OK   | from sklearn.metrics import classification_report
+  [37] 09:26:56 |    5.84s | OK   | from sklearn.preprocessing import StandardScaler
+  [38] 09:27:02 |    0.57s | OK   | from sklearn.preprocessing import OneHotEncoder
+  [39] 09:27:03 |    0.02s | OK   | #Importing the Necessary libraries
+  [40] 09:27:03 |    0.01s | OK   | # Drop the columns with NaN values
+  [41] 09:27:03 |    0.06s | OK   | from sklearn.feature_extraction.text import CountVectorizer
+  [42] 09:27:03 |    0.01s | OK   | from sklearn.naive_bayes import MultinomialNB
+  [43] 09:27:03 |    0.02s | OK   | from sklearn.metrics import accuracy_score, confusion_matrix, classifi
+  [44] 09:27:03 |    0.01s | OK   | from sklearn.naive_bayes import GaussianNB
+  [45] 09:27:03 |    0.01s | OK   | # Đặc trưng: Age, EstimatedSalary; nhãn: Purchased (khách có mua hàng 
+  [46] 09:27:03 |    0.11s | OK   | # Biên quyết định của Gaussian Naïve Bayes trên dữ liệu test (2 đặc tr
+  [47] 09:27:03 |    0.18s | OK   | from sklearn.naive_bayes import CategoricalNB
+  => Bắt đầu 08/10/2026 09:24:40, kết thúc 09:27:03, tổng 142.8s; chạy 47/47 ô, bỏ qua 0, lỗi 0
+
+====================================================================================================
+NOTEBOOK: notebooks/01_COVID.ipynb
+  [01] 18:24:15 |   16.30s | OK   | # Thư viện dùng chung (đề import rải rác ở nhiều ô; gom lại để noteboo
+  [02] 18:24:31 |   14.69s | OK   | import numpy as np
+  [03] 18:24:46 |    0.05s | OK   | # Take a quick look at the data
+  [04] 18:24:46 |    0.02s | OK   | covid_data.dtypes
+  [05] 18:24:46 |    0.01s | OK   | covid_data.shape
+  [06] 18:24:46 |    0.13s | OK   | # Get the mean of the data
+  [07] 18:24:46 |    0.01s | OK   | print("mean      :", data_mean)
+  [08] 18:24:46 |    0.12s | OK   | # [Mở rộng] bỏ giá trị thiếu trước khi tính thống kê
+  => Bắt đầu 10/10/2026 18:24:15, kết thúc 18:24:46, tổng 31.4s; chạy 8/8 ô, bỏ qua 0, lỗi 0
+
+====================================================================================================
+NOTEBOOK: notebooks/02_Marketing_Campaign.ipynb
+  [01] 18:24:15 |   16.30s | OK   | # Thư viện dùng chung (đề import rải rác ở nhiều ô; gom lại để noteboo
+  [02] 18:24:31 |    0.38s | OK   | import pandas as pd
+  [03] 18:24:32 |    0.06s | OK   | marketing_data.head()
+  [04] 18:24:32 |    0.04s | OK   | # Remove duplicates across the columns in our dataset:
+  [05] 18:24:32 |    0.06s | OK   | # Delete a specified row at index value 1:
+  [06] 18:24:32 |    0.05s | OK   | # Delete a single column
+  [07] 18:24:32 |    0.03s | OK   | # Replace the values in Teenhome with has teen and has no teen
+  [08] 18:24:32 |    0.01s | OK   | # Fill NAs in the Income column
+  [09] 18:24:32 |    0.02s | OK   | # Check for missing values using the isnull and sum methods
+  [10] 18:24:32 |    0.03s | OK   | # Drop missing values using the dropna method
+  [11] 18:24:32 |  160.05s | OK   | import pandas as pd
+  [12] --:--:-- |    --    | BỎ QUA (chỉ có code, không chạy tự động) | import pandas as pd
+  [13] 18:27:12 |   62.72s | OK   | import sweetviz as sv
+  [14] --:--:-- |    --    | BỎ QUA (chỉ có code, không chạy tự động) | from autoviz.AutoViz_Class import AutoViz_Class
+  => Bắt đầu 10/10/2026 18:24:15, kết thúc 18:28:15, tổng 239.8s; chạy 12/14 ô, bỏ qua 2, lỗi 0
+
+====================================================================================================
+NOTEBOOK: notebooks/03_Wine_do.ipynb
+  [01] 18:24:15 |   16.30s | OK   | # Thư viện dùng chung (đề import rải rác ở nhiều ô; gom lại để noteboo
+  [02] 18:24:31 |    0.41s | OK   | import numpy as np
+  [03] 18:24:32 |    0.02s | OK   | wine.dtypes
+  [04] 18:24:32 |    0.02s | OK   | wine.isnull().sum()
+  [05] 18:24:32 |    0.15s | OK   | wine.describe().T
+  [06] 18:24:32 |    0.06s | OK   | # Các thước đo thống kê mô tả cho một số cột (ví dụ: alcohol)
+  [07] 18:24:32 |    0.04s | OK   | # Phân bố của biến mục tiêu quality và độ lệch (skewness) của các biến
+  [08] 18:24:32 |    0.05s | OK   | # Phát hiện ngoại lai bằng quy tắc 1.5*IQR
+  [09] 18:24:32 |    2.30s | OK   | import matplotlib.pyplot as plt
+  [10] 18:24:34 |    2.12s | OK   | # 3. Boxplot alcohol theo quality (biến số vs biến phân loại)
+  => Bắt đầu 10/10/2026 18:24:15, kết thúc 18:24:37, tổng 21.6s; chạy 10/10 ô, bỏ qua 0, lỗi 0
+
+====================================================================================================
+NOTEBOOK: notebooks/04_Pima_Diabetes.ipynb
+  [01] 18:24:15 |   16.30s | OK   | # Thư viện dùng chung (đề import rải rác ở nhiều ô; gom lại để noteboo
+  [02] 18:24:31 |    0.39s | OK   | diabetes = pd.read_csv("data/diabetes.csv")
+  [03] 18:24:32 |    0.15s | OK   | diabetes.describe().T
+  [04] 18:24:32 |    0.02s | OK   | # Trong dữ liệu Pima, giá trị 0 ở các cột dưới đây thực chất là dữ liệ
+  [05] 18:24:32 |    0.22s | OK   | # Xử lý dữ liệu thiếu: thay 0 bằng NaN rồi điền bằng median của từng c
+  [06] 18:24:32 |    0.19s | OK   | print("Phân bố nhãn Outcome:"); print(diabetes['Outcome'].value_counts
+  [07] 18:24:32 |    2.27s | OK   | diabetes = pd.read_csv("data/diabetes.csv")
+  [08] 18:24:35 |    2.05s | OK   | # 3. Boxplot BMI theo Outcome và scatter Glucose - BMI
+  => Bắt đầu 10/10/2026 18:24:15, kết thúc 18:24:37, tổng 21.7s; chạy 8/8 ô, bỏ qua 0, lỗi 0
+
+====================================================================================================
+NOTEBOOK: notebooks/05_Gia_nha_Amsterdam.ipynb
+  [01] 18:24:42 |    3.47s | OK   | # Thư viện dùng chung (đề import rải rác ở nhiều ô; gom lại để noteboo
+  [02] 18:24:45 |    0.02s | OK   | import os
+  [03] 18:24:45 |    0.12s | OK   | import pandas as pd
+  [04] 18:24:45 |    0.04s | OK   | houseprices_sorted = houseprices_data.sort_values('Price', ascending =
+  [05] 18:24:46 |    0.42s | OK   | # case 1: basic
+  [06] 18:24:46 |    0.52s | OK   | # case 2: advanced 1
+  [07] 18:24:47 |    1.64s | OK   | # case 3: advanced 2
+  [08] 18:24:48 |    0.46s | OK   | import matplotlib.pyplot as plt
+  [09] 18:24:49 |    0.82s | OK   | # case 2: advanced 1
+  [10] 18:24:49 |    2.47s | OK   | # case 3: view multiple perspectives at once
+  [11] 18:24:52 |    0.52s | OK   | import pandas as pd
+  [12] 18:24:52 |    0.59s | OK   | # case 2: advanced
+  [13] 18:24:53 |    0.40s | OK   | # case 1: basic
+  [14] 18:24:53 |    0.55s | OK   | # case 2: advanced
+  [15] 18:24:54 |    0.06s | OK   | houseprices_data.describe()
+  => Bắt đầu 10/10/2026 18:24:42, kết thúc 18:24:54, tổng 12.3s; chạy 15/15 ô, bỏ qua 0, lỗi 0
+
+====================================================================================================
+NOTEBOOK: notebooks/06_Online_Retail.ipynb
+  [01] 18:24:42 |    3.52s | OK   | # Thư viện dùng chung (đề import rải rác ở nhiều ô; gom lại để noteboo
+  [02] 18:24:45 |  203.07s | OK   | import pandas as pd, matplotlib.pyplot as plt, seaborn as sns
+  [03] 18:28:08 |    1.06s | OK   | retail.info()
+  [04] 18:28:10 |    1.63s | OK   | print(retail.isnull().sum())
+  [05] 18:28:11 |    3.39s | OK   | print("Đơn bị hủy:", retail['InvoiceNo'].astype(str).str.startswith('C
+  [06] 18:28:15 |    0.87s | OK   | # 10 quốc gia có doanh thu cao nhất
+  [07] 18:28:15 |    0.96s | OK   | # 10 sản phẩm bán nhiều nhất và doanh thu theo tháng
+  [08] 18:28:16 |    3.37s | OK   | # Phân bố số lượng và đơn giá (thang log do lệch phải mạnh)
+  => Bắt đầu 10/10/2026 18:24:42, kết thúc 18:28:20, tổng 217.9s; chạy 8/8 ô, bỏ qua 0, lỗi 0
+
+====================================================================================================
+NOTEBOOK: notebooks/07_Penguins.ipynb
+  [01] 18:24:53 |    5.82s | OK   | # Thư viện dùng chung (đề import rải rác ở nhiều ô; gom lại để noteboo
+  [02] 18:24:58 |    0.03s | OK   | import pandas as pd
+  [03] 18:24:58 |    0.71s | OK   | # case 1: basic
+  [04] 18:24:59 |    0.84s | OK   | # case 2: advanced
+  [05] 18:25:00 |    0.47s | OK   | # case 1: basic
+  [06] 18:25:01 |    0.80s | OK   | # case 2: advanced
+  [07] 18:25:01 |    0.68s | OK   | penguins_group = penguins_data.groupby('species').count()
+  [08] 18:25:02 |    0.26s | OK   | # case 2: advanced
+  [09] 18:25:02 |    0.04s | OK   | import pandas as pd
+  [10] 18:25:02 |    0.69s | OK   | # case 1: basic
+  [11] 18:25:03 |    0.80s | OK   | # case 2: advanced
+  [12] 18:25:04 |    0.11s | OK   | # [Chỉnh] cột 'sex' không được chọn ở bước 1 của đề nên nạp lại từ fil
+  [13] 18:25:04 |    0.05s | OK   | pd.pivot_table(penguins_data, values='culmen_length_mm',
+  [14] 18:25:04 |    2.36s | OK   | import seaborn as sns
+  => Bắt đầu 10/10/2026 18:24:53, kết thúc 18:25:06, tổng 13.8s; chạy 14/14 ô, bỏ qua 0, lỗi 0
+
+====================================================================================================
+NOTEBOOK: notebooks/08_Credit_Card.ipynb
+  [01] 18:25:00 |    7.39s | OK   | # Thư viện dùng chung (đề import rải rác ở nhiều ô; gom lại để noteboo
+  [02] 18:25:08 |    0.06s | OK   | import numpy as np #numerical computation
+  [03] 18:25:08 |    0.81s | OK   | df = pd.read_csv('data.csv') #Load the cleaned data
+  [04] 18:25:09 |    0.04s | OK   | from sklearn.model_selection import train_test_split
+  [05] 18:25:09 |    0.22s | OK   | # the tree will grow to a depth of at most 2
+  [06] 18:25:09 |    0.16s | OK   | dot_data = tree.export_graphviz(dt,
+  [07] 18:25:09 |    0.16s | OK   | # (lưu thêm ảnh PNG để đưa vào báo cáo)
+  [08] 18:25:09 |   17.21s | OK   | from sklearn.model_selection import GridSearchCV
+  [09] 18:25:26 |    0.02s | OK   | print("Tham số tốt nhất:", cv.best_params_)
+  [10] 18:25:27 |    0.02s | OK   | cv_results_df = pd.DataFrame(cv.cv_results_)
+  [11] 18:25:27 |    1.05s | OK   | mpl.rcParams['figure.dpi'] = 100   # [Chỉnh] hạ dpi để ảnh nhẹ hơn (đề
+  [12] 18:25:28 |    0.01s | OK   | from sklearn.model_selection import GridSearchCV
+  [13] 18:25:28 |  137.15s | OK   | #a parameter grid for this exercise in order to search the numbers of 
+  [14] 18:27:45 |    0.98s | OK   | cv_rf_ex_results_df = pd.DataFrame(cv_rf_ex.cv_results_)
+  [15] 18:27:46 |    0.02s | OK   | cv_rf_ex.best_params_
+  [16] 18:27:46 |    0.83s | OK   | # the feature names and importances
+  => Bắt đầu 10/10/2026 18:25:00, kết thúc 18:27:47, tổng 166.3s; chạy 16/16 ô, bỏ qua 0, lỗi 0
+
+====================================================================================================
+NOTEBOOK: notebooks/09_Titanic.ipynb
+  [01] 18:25:13 |    6.62s | OK   | # Thư viện dùng chung (đề import rải rác ở nhiều ô; gom lại để noteboo
+  [02] 18:25:20 |    0.12s | OK   | from sklearn.ensemble import RandomForestClassifier
+  [03] 18:25:20 |    1.88s | OK   | # Cây quyết định: chọn max_depth bằng GridSearchCV
+  [04] 18:25:22 |   16.96s | OK   | # Rừng cây
+  => Bắt đầu 10/10/2026 18:25:13, kết thúc 18:25:39, tổng 25.6s; chạy 4/4 ô, bỏ qua 0, lỗi 0
+
+====================================================================================================
+NOTEBOOK: notebooks/10_Diabetes_100k.ipynb
+  [01] 18:25:45 |    6.24s | OK   | # Thư viện dùng chung (đề import rải rác ở nhiều ô; gom lại để noteboo
+  [02] 18:25:51 |    1.15s | OK   | diab = pd.read_csv('data/diabetes_prediction_dataset.csv')
+  [03] 18:25:53 |  248.39s | OK   | gs_d = GridSearchCV(tree.DecisionTreeClassifier(random_state=24),
+  [04] 18:30:01 |    7.50s | OK   | from sklearn.preprocessing import StandardScaler
+  => Bắt đầu 10/10/2026 18:25:45, kết thúc 18:30:09, tổng 263.3s; chạy 4/4 ô, bỏ qua 0, lỗi 0
+
+====================================================================================================
+NOTEBOOK: notebooks/11_Iris.ipynb
+  [01] 18:27:54 |    6.48s | OK   | # Thư viện dùng chung (đề import rải rác ở nhiều ô; gom lại để noteboo
+  [02] 18:28:00 |    0.20s | OK   | import numpy as np
+  [03] 18:28:00 |    0.01s | OK   | # Từ tập dữ liệu ban đầu, tách lấy ma trận biểu diễn các đặc trưng và 
+  [04] 18:28:00 |    0.05s | OK   | from sklearn import svm
+  [05] 18:28:00 |    0.02s | OK   | # Tính độ chính xác trên tập huấn luyện và tập kiểm tra
+  [06] 18:28:00 |    0.08s | OK   | # best_svm, best_val_acc và best_kernel lần lượt là các biến lưu mô hì
+  [07] 18:28:00 |    0.87s | OK   | from sklearn.model_selection import GridSearchCV
+  => Bắt đầu 10/10/2026 18:27:54, kết thúc 18:28:01, tổng 7.8s; chạy 7/7 ô, bỏ qua 0, lỗi 0
+
+====================================================================================================
+NOTEBOOK: notebooks/12_Digits.ipynb
+  [01] 18:28:08 |    6.79s | OK   | # Thư viện dùng chung (đề import rải rác ở nhiều ô; gom lại để noteboo
+  [02] 18:28:15 |    0.18s | OK   | import pandas as pd
+  [03] 18:28:15 |    0.04s | OK   | #thông tin toàn bộ dữ liệu đã tải về
+  [04] 18:28:16 |    0.02s | OK   | #xem thông tin của một hình dưới dạng ma trận 8 x 8
+  [05] 18:28:16 |    0.01s | OK   | #xem thông tin của một hình dưới dạng mảng
+  [06] 18:28:16 |    0.01s | OK   | #xem thông tin 9 nhãn đầu tiên
+  [07] 18:28:16 |    5.42s | OK   | # Each Digit is represented in digits.images as a matrix of 8x8 = 64 p
+  [08] 18:28:21 |    0.61s | OK   | # Hàm vẽ 1 ảnh có kích thước 8 x 8 (ảnh lấy từ ma images)
+  [09] 18:28:22 |    0.31s | OK   | # Thực hiện import các thư viện cần thiết để xây dựng mô hình SVM
+  [10] 18:28:22 |    1.11s | OK   | from sklearn.metrics import confusion_matrix
+  [11] 18:28:23 |    0.03s | OK   | from sklearn.metrics import classification_report
+  => Bắt đầu 10/10/2026 18:28:08, kết thúc 18:28:23, tổng 14.7s; chạy 11/11 ô, bỏ qua 0, lỗi 0
+
+====================================================================================================
+NOTEBOOK: notebooks/13_Animal_Condition.ipynb
+  [01] 18:28:21 |    6.08s | OK   | # Thư viện dùng chung (đề import rải rác ở nhiều ô; gom lại để noteboo
+  [02] 18:28:27 |    3.93s | OK   | from sklearn.preprocessing import OneHotEncoder
+  => Bắt đầu 10/10/2026 18:28:21, kết thúc 18:28:31, tổng 10.0s; chạy 2/2 ô, bỏ qua 0, lỗi 0
+
+====================================================================================================
+NOTEBOOK: notebooks/14_Spam.ipynb
+  [01] 18:28:27 |    7.04s | OK   | # Thư viện dùng chung (đề import rải rác ở nhiều ô; gom lại để noteboo
+  [02] 18:28:34 |    0.08s | OK   | #Importing the Necessary libraries
+  [03] 18:28:34 |    0.02s | OK   | # Drop the columns with NaN values
+  [04] 18:28:34 |    0.31s | OK   | from sklearn.feature_extraction.text import CountVectorizer
+  [05] 18:28:34 |    0.06s | OK   | from sklearn.naive_bayes import MultinomialNB
+  [06] 18:28:35 |    0.11s | OK   | from sklearn.metrics import accuracy_score, confusion_matrix, classifi
+  => Bắt đầu 10/10/2026 18:28:27, kết thúc 18:28:35, tổng 7.7s; chạy 6/6 ô, bỏ qua 0, lỗi 0
+
+====================================================================================================
+NOTEBOOK: notebooks/15_Customer_Behaviour.ipynb
+  [01] 18:28:30 |    6.93s | OK   | # Thư viện dùng chung (đề import rải rác ở nhiều ô; gom lại để noteboo
+  [02] 18:28:37 |    0.07s | OK   | from sklearn.naive_bayes import GaussianNB
+  [03] 18:28:37 |    0.08s | OK   | # Đặc trưng: Age, EstimatedSalary; nhãn: Purchased (khách có mua hàng 
+  [04] 18:28:37 |    0.70s | OK   | # Biên quyết định của Gaussian Naïve Bayes trên dữ liệu test (2 đặc tr
+  => Bắt đầu 10/10/2026 18:28:30, kết thúc 18:28:37, tổng 7.8s; chạy 4/4 ô, bỏ qua 0, lỗi 0
+
+====================================================================================================
+NOTEBOOK: notebooks/16_Mushroom.ipynb
+  [01] 18:28:38 |    3.83s | OK   | # Thư viện dùng chung (đề import rải rác ở nhiều ô; gom lại để noteboo
+  [02] 18:28:42 |    0.22s | OK   | from sklearn.naive_bayes import CategoricalNB
+  => Bắt đầu 10/10/2026 18:28:38, kết thúc 18:28:42, tổng 4.1s; chạy 2/2 ô, bỏ qua 0, lỗi 0
