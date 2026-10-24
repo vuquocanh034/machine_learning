@@ -1,0 +1,10 @@
+﻿Biến A,Biến B,|r|
+YearBuilt,HouseAge,0.999
+YearRemodAdd,RemodAge,0.998
+GarageQual,GarageCond,0.959
+PoolArea,PoolQC,0.932
+GarageCars,GarageArea,0.887
+BsmtFinType2,BsmtFinSF2,0.868
+Fireplaces,FireplaceQu,0.865
+GrLivArea,TotalSF,0.86
+BsmtFinType1,BsmtFinSF1,0.852

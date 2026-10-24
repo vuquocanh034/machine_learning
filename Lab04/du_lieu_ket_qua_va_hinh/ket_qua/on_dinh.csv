@@ -1,0 +1,9 @@
+﻿,Jaccard TB giữa các fold,Số đặc trưng TB
+Variance,0.96,179
+Correlation,0.864,111
+F-test,0.964,60
+Mutual Info,0.884,60
+RFE (Ridge),0.478,60
+Lasso,0.636,101
+RF importance,0.799,20
+XGB importance,0.598,24

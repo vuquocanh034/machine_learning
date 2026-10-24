@@ -1,0 +1,33 @@
+{
+ "n_missing_cols_train": 19,
+ "r_grliv_before": 0.7086244776126521,
+ "r_grliv_after": 0.7349681645359326,
+ "n_train_before": 1460,
+ "n_train_after": 1458,
+ "skew_y_raw": 1.8793604459195012,
+ "skew_y_log": 0.12145464268184525,
+ "n_log_features": 17,
+ "n_features_final": 229,
+ "n_num": 66,
+ "n_ohe": 163,
+ "n_cat_vars": 24,
+ "n_test": 1459,
+ "n_pairs_085": 9,
+ "top15_corr": {
+  "OverallQual": 0.8214046894649703,
+  "TotalSF": 0.8178179553452913,
+  "GrLivArea": 0.7374310095769006,
+  "ExterQual": 0.6822256806944503,
+  "GarageCars": 0.6810326763026908,
+  "TotalBath": 0.6766776974808338,
+  "KitchenQual": 0.6699896856595251,
+  "GarageArea": 0.656128517816222,
+  "TotalBsmtSF": 0.6475629761764196,
+  "BsmtQual": 0.6168970887981781,
+  "1stFlrSF": 0.6154083389505416,
+  "GarageFinish": 0.6056019699103182,
+  "FullBath": 0.5958989711018255,
+  "HouseAge": 0.5877667506602262,
+  "YearBuilt": 0.5870429875681243
+ }
+}

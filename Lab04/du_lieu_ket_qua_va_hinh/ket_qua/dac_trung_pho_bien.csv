@@ -1,0 +1,21 @@
+﻿,Số kỹ thuật chọn (/8)
+HouseAge,8
+BsmtQual,8
+OverallQual,8
+TotalSF,8
+TotalBath,8
+GarageArea,8
+RemodAge,7
+CentralAir,7
+LotArea,7
+TotalBsmtSF,7
+GarageCars,7
+KitchenQual,7
+GrLivArea,7
+Neighborhood_NridgHt,6
+GarageYrBlt,6
+ExterQual,6
+Fireplaces,6
+Foundation_PConc,6
+MSZoning_RM,6
+BsmtFinSF1,6

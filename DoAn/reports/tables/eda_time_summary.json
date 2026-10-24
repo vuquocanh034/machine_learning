@@ -1,0 +1,57 @@
+{
+  "cutoff": "2011-09-09",
+  "rows_raw": 541909,
+  "rows_sales": 530104,
+  "date_min": "2010-12-01 08:26:00",
+  "date_max": "2011-12-09 12:50:00",
+  "periods": {
+    "Quan sát": {
+      "Ngày lịch trong giai đoạn": 282.0,
+      "Ngày có giao dịch bán": 226.0,
+      "Dòng gốc (chưa lọc)": 332447.0,
+      "Dòng bán hợp lệ (sau bộ lọc nhẹ)": 324631.0,
+      "Hóa đơn bán": 12955.0,
+      "Khách trong dữ liệu gốc (kể cả chỉ có hóa đơn hủy)": 3404.0,
+      "Khách có mua (CustomerID không thiếu)": 3362.0,
+      "Doanh thu gộp (GBP, chưa trừ hủy)": 6528754.202,
+      "Doanh thu / ngày giao dịch (GBP)": 28888.292929203537,
+      "Hóa đơn / ngày giao dịch": 57.323008849557525,
+      "Khách khác nhau / ngày giao dịch (TB)": 47.58849557522124,
+      "Doanh thu thuộc dòng thiếu CustomerID (%)": 16.8254330920207
+    },
+    "Kiểm chứng": {
+      "Ngày lịch trong giai đoạn": 92.0,
+      "Ngày có giao dịch bán": 79.0,
+      "Dòng gốc (chưa lọc)": 209462.0,
+      "Dòng bán hợp lệ (sau bộ lọc nhẹ)": 205473.0,
+      "Hóa đơn bán": 7005.0,
+      "Khách trong dữ liệu gốc (kể cả chỉ có hóa đơn hủy)": 2927.0,
+      "Khách có mua (CustomerID không thiếu)": 2897.0,
+      "Doanh thu gộp (GBP, chưa trừ hủy)": 4137930.3419999997,
+      "Doanh thu / ngày giao dịch (GBP)": 52378.86508860759,
+      "Hóa đơn / ngày giao dịch": 88.67088607594937,
+      "Khách khác nhau / ngày giao dịch (TB)": 76.0506329113924,
+      "Doanh thu thuộc dòng thiếu CustomerID (%)": 15.872318181232448
+    }
+  },
+  "customer_overlap": {
+    "obs_customers": 3362,
+    "val_customers": 2897,
+    "in_both": 1921,
+    "only_val": 976,
+    "only_obs": 1441
+  },
+  "largest_invoice_cancelled": {
+    "invoice": "581483",
+    "revenue": 168469.6,
+    "cancel_invoice": "C581484",
+    "minutes_later": 12.0
+  },
+  "versions": {
+    "pandas": "3.0.5",
+    "numpy": "2.5.3",
+    "matplotlib": "3.11.2",
+    "openpyxl": "3.1.5"
+  },
+  "python": "3.13.17"
+}
