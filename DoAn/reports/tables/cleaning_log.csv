@@ -1,0 +1,13 @@
+step,rows
+rows_raw,541909
+removed_duplicates,5268
+removed_missing_customer,135037
+cancel_rows_split,8872
+removed_nonpositive_quantity,0
+removed_nonpositive_price,40
+removed_nonproduct_sales,1539
+removed_nonproduct_cancel,366
+rows_sales,391153
+rows_cancel,8506
+customers_sales,4334
+customers_cancel,1534
