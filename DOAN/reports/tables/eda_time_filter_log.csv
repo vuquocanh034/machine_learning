@@ -1,0 +1,5 @@
+﻿step,remaining_rows,removed_rows
+Toàn file,541909,0
+Bỏ hóa đơn hủy (InvoiceNo bắt đầu C),532621,9288
+Giữ Quantity > 0 (bỏ trả hàng/điều chỉnh),531285,1336
+Giữ UnitPrice > 0 (bỏ hàng miễn phí/giá lỗi),530104,1181
