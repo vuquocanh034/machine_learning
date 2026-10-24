@@ -1,0 +1,17 @@
+﻿StockCode,reason,observed_rows,actual_descriptions
+POST,POSTAGE: cước vận chuyển,781,POSTAGE
+DOT,DOTCOM POSTAGE: cước vận chuyển,570,DOTCOM POSTAGE
+C2,CARRIAGE: vận chuyển,89,CARRIAGE
+D,Discount: chiết khấu,56,Discount
+M,Manual: bút toán thủ công chưa xác định hàng hóa,372,Manual
+m,Manual: bút toán thủ công,1,Manual
+BANK CHARGES,Bank Charges: phí ngân hàng,24,Bank Charges
+AMAZONFEE,AMAZON FEE: phí nền tảng,25,AMAZON FEE
+B,Adjust bad debt: điều chỉnh nợ,3,Adjust bad debt
+CRUK,CRUK Commission: hoa hồng,2,CRUK Commission
+S,"SAMPLES: mẫu, tách khỏi hàng bán lẻ",55,SAMPLES
+gift_0001_20,"Gift Voucher: phiếu quà tặng, tránh cộng như hàng hóa vật lý",9,Dotcomgiftshop Gift Voucher £20.00 | to push order througha s stock was
+gift_0001_10,"Gift Voucher: phiếu quà tặng, tránh cộng như hàng hóa vật lý",8,Dotcomgiftshop Gift Voucher £10.00
+gift_0001_30,"Gift Voucher: phiếu quà tặng, tránh cộng như hàng hóa vật lý",8,Dotcomgiftshop Gift Voucher £30.00
+gift_0001_50,"Gift Voucher: phiếu quà tặng, tránh cộng như hàng hóa vật lý",4,Dotcomgiftshop Gift Voucher £50.00
+gift_0001_40,"Gift Voucher: phiếu quà tặng, tránh cộng như hàng hóa vật lý",3,Dotcomgiftshop Gift Voucher £40.00
