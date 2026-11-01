@@ -1,0 +1,3 @@
+﻿algo,feature_set,params,n_clusters,noise_frac,silhouette,davies_bouldin,calinski_harabasz,inertia
+RFM_rule,RFM,"{""scoring"": ""quintile_rank_min_ties"", ""segments"": 8}",8,0.0,0.12582886247696606,1.5719995336611732,1199.8253364097463,
+RFM_rule,RFM_PLUS,"{""scoring"": ""quintile_rank_min_ties"", ""segments"": 8}",8,0.0,0.09060710081743922,2.8972230097605443,471.96892192512985,
