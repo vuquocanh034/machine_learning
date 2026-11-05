@@ -25,6 +25,11 @@ RFM = ["Recency", "Frequency", "Monetary"]
 RFM_PLUS = RFM + ["AvgOrderValue", "NUniqueProducts", "AvgInterPurchaseDays", "CancelRate"]
 FEATURE_SETS = {"RFM": RFM, "RFM_PLUS": RFM_PLUS}
 
+# ---- K-Means (tuần 3A) ----
+KMEANS_K_RANGE = tuple(range(2, 11))        # k = 2..10 theo proposal; k = 1 không phải phân cụm
+KMEANS_INITS = ("k-means++", "random")
+KMEANS_N_INIT = 200                         # số lần khởi tạo lại; mục 2 notebook 03: k=4 ổn từ 50, k=10 cần nhiều hơn
+
 # ---- Schema chung cho mọi bảng tuning ----
 TUNING_SCHEMA = [
     "algo", "feature_set", "params", "n_clusters", "noise_frac",
